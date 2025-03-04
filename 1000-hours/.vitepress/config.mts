@@ -12,6 +12,14 @@ import carousel from "./lib/markdown-it-carousel";
 export default withMermaid(
   // https://vitepress.dev/reference/site-config
   defineConfig({
+    base: "/1000-hours/",
+    vue:{
+      template:{
+        transformAssetUrls:{
+          'span':['data-audio-us-female','data-audio-us-male'],
+        }
+      }
+    },
     title: "1000 小时",
     description: "用注意力填满 1000 小时就能练成任何你需要的技能……",
     head: [
